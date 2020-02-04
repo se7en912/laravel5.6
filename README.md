@@ -1,14 +1,14 @@
 # laravel5.6安装配置
 服务器要求
 Laravel 框架对PHP版本和扩展有一定要求，不过这些要求 Laravel Homestead 都已经满足了，不过如果你没有使用 Homestead 的话（那真是一件很遗憾的事情），有必要了解下这些以便确认自己的环境满足要求：
-PHP >= 7.1.3
-PHP OpenSSL 扩展
-PHP PDO 扩展
-PHP Mbstring 扩展
-PHP Tokenizer 扩展
-PHP XML 扩展
-PHP Ctype 扩展
-PHP JSON 扩展
+- PHP >= 7.1.3
+- PHP OpenSSL 扩展
+- PHP PDO 扩展
+- PHP Mbstring 扩展
+- PHP Tokenizer 扩展
+- PHP XML 扩展
+- PHP Ctype 扩展
+- PHP JSON 扩展
 满足以上需求之后，就可以开始安装 Laravel 了。
 
 # 配置 Laravel
