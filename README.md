@@ -55,11 +55,11 @@ RewriteRule ^ index.php [L]
 Nginx
 如果你使用的是 Nginx，使用如下站点配置指令就可以支持 URL 美化：
 
-location / {
+ location / {
 
     try_files $uri $uri/ /index.php?$query_string;
     
-}
+ }
 
   
 当然，使用 Homestead 或 Valet 的话，以上配置已经为你配置好，无需额外操作。
