@@ -30,8 +30,6 @@ Laravel 框架的所有配置文件都存放在 config 目录下，所有的配�
 
 通常，该字符串应该是 32 位长，通过 .env 文件中的 APP_KEY 进行配置，如果你还没有将 .env.example 文件重命名为 .env，现在立即这样做。如果应用 key 没有被设置，用户 Session 和其它加密数据将会有安全隐患!
 
-更多配置
-
 Laravel 几乎不再需要其它任何配置就可以正常使用了，不过，你最好再看看 config/app.php 文件，其中包含了一些基于应用可能需要进行改变的配置，比如 timezone 和 locale（分别用于配置时区和本地化）。
 
 你可能还想要配置 Laravel 的一些其它组件，比如缓存、数据库、Session 等，关于这些我们将会在后续文档一一探讨。
@@ -45,16 +43,22 @@ Apache
 如果 Laravel 自带的 .htaccess 文件不起作用，试试将其中内容做如下替换：
 
 Options +FollowSymLinks
+
 RewriteEngine On
+
 RewriteCond %{REQUEST_FILENAME} !-d
+
 RewriteCond %{REQUEST_FILENAME} !-f
+
 RewriteRule ^ index.php [L]
 
 Nginx
 如果你使用的是 Nginx，使用如下站点配置指令就可以支持 URL 美化：
 
 location / {
+
     try_files $uri $uri/ /index.php?$query_string;
+    
 }
 
   
