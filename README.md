@@ -34,7 +34,4 @@ Laravel 框架的所有配置文件都存放在 config 目录下，所有的配�
 
 Laravel 几乎不再需要其它任何配置就可以正常使用了，不过，你最好再看看 config/app.php 文件，其中包含了一些基于应用可能需要进行改变的配置，比如 timezone 和 locale（分别用于配置时区和本地化）。
 
-
-https://xueyuanjun.com/link/8650#bkmrk-%E4%BD%A0%E5%8F%AF%E8%83%BD%E8%BF%98%E6%83%B3%E8%A6%81%E9%85%8D%E7%BD%AE-laravel-%E7%9A%84%E4%B8%80%E4%BA%9B
-  
 你可能还想要配置 Laravel 的一些其它组件，比如缓存、数据库、Session 等，关于这些我们将会在后续文档一一探讨。
