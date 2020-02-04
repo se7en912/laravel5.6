@@ -35,3 +35,27 @@ Laravel 框架的所有配置文件都存放在 config 目录下，所有的配�
 Laravel 几乎不再需要其它任何配置就可以正常使用了，不过，你最好再看看 config/app.php 文件，其中包含了一些基于应用可能需要进行改变的配置，比如 timezone 和 locale（分别用于配置时区和本地化）。
 
 你可能还想要配置 Laravel 的一些其它组件，比如缓存、数据库、Session 等，关于这些我们将会在后续文档一一探讨。
+
+# Web 服务器配置
+关于虚拟主机的配置（映射域名到Laravel应用目录）略过，如果了解细节可参考这篇教程，当然也可以留待下一篇讲 Homestead 和 Valet 再去了解。本文只探讨如何美化 URL 让其更具有可读性。
+Apache
+
+框架中自带的 public/.htaccess 文件支持隐藏 URL 中的 index.php，如过你的 Laravel 应用使用 Apache 作为服务器，需要先确保 Apache 启用了mod_rewrite 模块以支持 .htaccess 解析。
+
+如果 Laravel 自带的 .htaccess 文件不起作用，试试将其中内容做如下替换：
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+Nginx
+如果你使用的是 Nginx，使用如下站点配置指令就可以支持 URL 美化：
+
+location / {
+    try_files $uri $uri/ /index.php?$query_string;
+}
+
+  
+当然，使用 Homestead 或 Valet 的话，以上配置已经为你配置好，无需额外操作。
