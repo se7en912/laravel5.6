@@ -10,7 +10,8 @@ PHP XML 扩展
 PHP Ctype 扩展
 PHP JSON 扩展
 满足以上需求之后，就可以开始安装 Laravel 了。
-#配置 Laravel
+
+# 配置 Laravel
 初始化配置
 公共目录
 安装完 Laravel 后，需要将 Web 服务器的 document/web 根目录指向 Laravel 应用的 public 目录，该目录下的 index.php 文件作为前端控制器（单一入口），所有 HTTP 请求都会通过该文件进入应用。
